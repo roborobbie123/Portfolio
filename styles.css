@@ -5,9 +5,15 @@
     font-family: "Lucida Console", monospace;
     color: green;
 }
+body {
+    min-height: 100vh;
+    background-image: url(https://papers.co/wallpaper/papers.co-sg90-dark-color-inside-gradation-blur-29-wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 body, .container {
     min-height: 100vh;
-    background-color: rgb(3, 3, 3);
 }
 .container {
     display: flex;
@@ -16,27 +22,74 @@ body, .container {
     margin: 2em 5em;
 }
 header {
-    display: flex;
-    flex: 1;
-    border: 1px solid rgb(83, 240, 83);
-    border-radius: 1em;
-    position: fixed;
-    background-color: aqua;
+    flex: .1;
+}
+nav {
+    height: 5em;
+    box-shadow: 3px 3px 5px black;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: white;
+    border-radius: 5px;
+}
+#menu-icon {
+    font-size: 2em;
+    margin-left: 1em
+}
+.bx:hover {
+    background-color: rgb(176, 175, 175);
 }
 nav ul {
-    flex: 1;
+    width: 100%;
+    list-style: none;
     display: flex;
-    gap: 1em;
-    padding: 1em;
+    justify-content: flex-end;
+    align-items: center;
 }
-nav ul li {
-    flex: 1;
-    list-style-type: none;
+nav li {
+    height: 50px;
+}
+nav a {
+    height: 100%;
+    padding: 0 30px;
     text-decoration: none;
+    display: flex;
+    align-items: center;
 }
-a {
-    text-decoration: none;
+nav a:hover {
+    background-color: rgb(176, 175, 175);
 }
+#title {
+    margin-right: auto;
+    margin-top: 1.85em
+}
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.48);
+    backdrop-filter: blur(10px);
+    box-shadow: -10 0 10 black;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+#sidebar li {
+    width: 100%;
+}
+#sidebar a {
+    width: 100%;
+}
+#closeBtn {
+    font-size: 2em;
+    margin-left: .7em;
+    margin-top: .5em;
+}
+
 section {
     flex: 4;
     display: flex;
@@ -62,6 +115,9 @@ footer {
     text-align: center;
     padding-top: 1em;
     max-height: 10em;
+}
+h3 {
+    padding-bottom: 1em;
 }   
 #links {
     display: flex;
